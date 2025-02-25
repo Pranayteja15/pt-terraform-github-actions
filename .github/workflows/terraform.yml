@@ -8,7 +8,7 @@ on:
 
 jobs:
   terraform:
-    uses: your-org/terraform-github-actions/.github/workflows/reusable_terraform.yaml@main
+    uses: Pranayteja15/terraform-github-actions/.github/workflows/reusable_terraform.yaml@main
     with:
       terraform_directory: "./terraform"
       terraform_version: "1.5.7"
