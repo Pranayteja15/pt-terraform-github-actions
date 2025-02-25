@@ -47,11 +47,12 @@ jobs:
         run: |
           cd ${{ inputs.terraform_directory }}
           terraform plan -out=tfplan
-        if: ${{ inputs.apply == false && inputs.destroy == false }}
+        if: always()
 
       - name: Terraform Apply
         run: |
           cd ${{ inputs.terraform_directory }}
+          ls -l
           terraform apply -auto-approve tfplan
         if: ${{ inputs.apply }}
 
